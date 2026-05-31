@@ -95,9 +95,6 @@ function Header({ route, go, cart, onCartClick }) {
       </div>
       <div className="navbar">
         <div className="wrap navbar-in">
-          <div className="navmark" onClick={() => go('home')}>
-            <img src="../../assets/brand/logo-round.png" alt="CreASHions by Asha" />
-          </div>
           <nav className="nav">
             {links.map(([r, label]) => (
               <a key={r} className={route === r ? 'on' : ''} onClick={() => go(r)}>{label}</a>

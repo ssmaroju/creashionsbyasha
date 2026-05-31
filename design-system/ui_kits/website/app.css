@@ -68,7 +68,7 @@ button{font-family:inherit;cursor:pointer;}
 .brand .nm{font-family:var(--font-wordmark);font-weight:700;font-size:25px;color:var(--ink-900);line-height:.95;letter-spacing:0;}
 .brand .nm .ash{color:var(--mulberry);font-weight:700;}
 .brand .sub{font-family:var(--font-body);font-weight:700;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-500);}
-.nav{display:flex;gap:26px;align-items:center;}
+.nav{display:flex;gap:26px;align-items:center;margin-right:auto;}
 .nav a{font-weight:600;font-size:15px;color:var(--ink-700);text-decoration:none;cursor:pointer;transition:color .2s;}
 .nav a:hover,.nav a.on{color:var(--mulberry);}
 .hdr-icons{display:flex;gap:6px;align-items:center;}
