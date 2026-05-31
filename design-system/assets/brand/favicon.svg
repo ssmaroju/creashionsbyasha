@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="CreASHions by Asha">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00ADBB"/>
+      <stop offset="0.55" stop-color="#1E6390"/>
+      <stop offset="1" stop-color="#00263A"/>
+    </linearGradient>
+  </defs>
+  <!-- filled brand ground so the mark reads at tiny sizes -->
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="url(#g)"/>
+  <!-- bold dragonfly, gold + white for contrast on the teal/navy ground -->
+  <g stroke="#F4E3B0" stroke-width="3.1" stroke-linecap="round" fill="none">
+    <!-- body -->
+    <line x1="32" y1="13" x2="32" y2="51"/>
+    <!-- upper wings -->
+    <path d="M32 23 C19 12, 6 16, 13 24 C17 28, 26 26, 32 25"/>
+    <path d="M32 23 C45 12, 58 16, 51 24 C47 28, 38 26, 32 25"/>
+    <!-- lower wings -->
+    <path d="M32 29 C21 22, 10 25, 16 32 C19 35, 27 32, 32 31"/>
+    <path d="M32 29 C43 22, 54 25, 48 32 C45 35, 37 32, 32 31"/>
+  </g>
+  <!-- head dot -->
+  <circle cx="32" cy="14" r="3.6" fill="#ffffff"/>
+</svg>

@@ -250,13 +250,14 @@ function CartDrawer({ open, items, onClose, setCart, go }) {
               {(() => {
                 const GIFT = 75;
                 return subtotal >= GIFT ? (
-                  <div style={{ display: 'flex', gap: 12, alignItems: 'center', background: 'var(--blush-50)', border: '1px solid var(--blush-200)', borderRadius: 'var(--radius-md)', padding: '10px 12px', marginBottom: 12 }}>
-                    <img src="../../assets/brand/keychain-gift.png" alt="" style={{ width: 44, height: 44, borderRadius: 8, objectFit: 'cover', flex: 'none' }} />
-                    <div style={{ fontSize: 12.5, color: 'var(--ink-700)', lineHeight: 1.4 }}><strong style={{ color: 'var(--mulberry)' }}>You've earned a free keychain!</strong> A handmade pressed-flower keychain ships free with your order.</div>
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', background: 'var(--blush-50)', border: '1px solid var(--blush-200)', borderRadius: 'var(--radius-md)', padding: '12px 14px', marginBottom: 12 }}>
+                    <img src="../../assets/brand/keychain-gift.png" alt="Handmade pressed-flower resin keychain" style={{ width: 64, height: 84, borderRadius: 10, objectFit: 'cover', objectPosition: 'top', flex: 'none', boxShadow: 'var(--shadow-sm)', background: '#fff' }} />
+                    <div style={{ fontSize: 12.5, color: 'var(--ink-700)', lineHeight: 1.45 }}><strong style={{ color: 'var(--mulberry)' }}>You've earned a free keychain!</strong> A handmade pressed-flower resin keychain, tucked in free with your order.</div>
                   </div>
                 ) : (
-                  <div style={{ fontSize: 12.5, color: 'var(--ink-500)', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 7 }}>
-                    <Dragonfly size={22} color="var(--accent)" /> Add ${GIFT - subtotal} more for a <strong style={{ color: 'var(--ink-700)' }}>free handmade keychain</strong>.
+                  <div style={{ display: 'flex', gap: 12, alignItems: 'center', background: 'var(--linen)', border: '1px dashed var(--taupe)', borderRadius: 'var(--radius-md)', padding: '10px 12px', marginBottom: 12 }}>
+                    <img src="../../assets/brand/keychain-gift.png" alt="Free handmade resin keychain" style={{ width: 46, height: 60, borderRadius: 8, objectFit: 'cover', objectPosition: 'top', flex: 'none', opacity: .92, background: '#fff' }} />
+                    <div style={{ fontSize: 12.5, color: 'var(--ink-700)', lineHeight: 1.4 }}>Add <strong style={{ color: 'var(--mulberry)' }}>${GIFT - subtotal} more</strong> to unlock a <strong>free handmade keychain</strong>.</div>
                   </div>
                 );
               })()}

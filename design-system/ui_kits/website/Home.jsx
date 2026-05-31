@@ -118,6 +118,39 @@ function PromoStrip() {
   );
 }
 
+/* Free-gift feature — the handmade keychain that ships free over $75 */
+function GiftBanner({ go }) {
+  return (
+    <section className="section wrap" style={{ paddingTop: 0 }}>
+      <div style={{
+        position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-xl)',
+        background: 'linear-gradient(105deg, var(--blush-50) 0%, var(--linen) 52%, var(--teal-100) 100%)',
+        border: '1px solid var(--blush-200)', boxShadow: 'var(--shadow-sm)',
+        display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 28, alignItems: 'center',
+        padding: '26px 32px',
+      }}>
+        <div className="wash" style={{ width: 260, height: 260, background: 'var(--gold-200)', top: -120, right: 40, opacity: .35 }} />
+        <div style={{ position: 'relative', flex: 'none' }}>
+          <img src="../../assets/brand/keychain-gift.png" alt="Handmade pressed-flower resin keychain"
+            style={{ width: 'clamp(120px, 16vw, 168px)', height: 'auto', display: 'block',
+              filter: 'drop-shadow(0 10px 22px rgba(58,44,49,.22))' }} />
+        </div>
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          <span className="eyebrow" style={{ color: 'var(--accent-hover)' }}>A little thank-you</span>
+          <h2 style={{ margin: '8px 0 8px', fontSize: 'clamp(1.5rem, 2.6vw, 2.1rem)', lineHeight: 1.12 }}>
+            A free handmade keychain with every order over $75
+          </h2>
+          <p style={{ margin: '0 0 18px', maxWidth: 460, color: 'var(--ink-700)' }}>
+            Every larger order comes with a one-of-a-kind pressed-flower resin keychain, poured by
+            hand and tucked into your package as a small thank-you.
+          </p>
+          <button className="btn btn-primary" onClick={() => go('shop')}>Shop & earn your gift <Icon name="arrow" size={17} /></button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Featured({ go, onOpen }) {
   const items = window.PRODUCTS.filter(p => p.badge === 'Bestseller').slice(0, 4);
   return (
@@ -241,6 +274,7 @@ function Home({ go, onOpen }) {
     <div>
       <Hero go={go} />
       <PromoStrip />
+      <GiftBanner go={go} />
       <Featured go={go} onOpen={onOpen} />
       <CollectionsStrip go={go} />
       <ProcessBlock go={go} />
