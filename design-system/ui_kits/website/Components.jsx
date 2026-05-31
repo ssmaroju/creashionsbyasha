@@ -151,7 +151,12 @@ function Footer({ go }) {
       </div>
       <div className="wrap ftr-bottom">
         <span>© 2026 CreASHions by Asha · Cypress, Texas</span>
-        <span>Free shipping on every order · Made to order</span>
+        <span style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          Free shipping on every order · Made to order
+          <a href="admin.html" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--teal-200)', textDecoration: 'none', fontWeight: 700, whiteSpace: 'nowrap' }} title="Owner tool — manage products & shop text">
+            <Icon name="sparkle" size={14} /> Studio
+          </a>
+        </span>
       </div>
     </footer>
   );
