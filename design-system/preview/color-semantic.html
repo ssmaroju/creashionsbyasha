@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--bg);font-family:var(--font-body);padding:22px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .tok{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#fff;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);}
+  .chip{width:40px;height:40px;border-radius:10px;flex:none;box-shadow:var(--shadow-sm);}
+  .meta{display:flex;flex-direction:column;}
+  .v{font-weight:800;font-size:13px;color:var(--ink-900);}
+  .u{font-size:11px;color:var(--ink-500);}
+  .lbl{font-size:var(--fs-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:700;color:var(--accent-hover);margin:0 0 12px;}
+</style></head>
+<body>
+  <p class="lbl">Semantic tokens — how color maps to meaning</p>
+  <div class="grid">
+    <div class="tok"><span class="chip" style="background:var(--primary)"></span><span class="meta"><span class="v">--primary</span><span class="u">Mulberry · buttons & key actions</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--accent)"></span><span class="meta"><span class="v">--accent</span><span class="u">Dragonfly teal · links, focus</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--highlight)"></span><span class="meta"><span class="v">--highlight</span><span class="u">Champagne gold · badges, rules</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--primary-soft)"></span><span class="meta"><span class="v">--primary-soft</span><span class="u">Blush tint · soft fills</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--sale)"></span><span class="meta"><span class="v">--sale</span><span class="u">Rose · sale price</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--success)"></span><span class="meta"><span class="v">--success</span><span class="u">Sage green · in stock</span></span></div>
+    <div class="tok"><span class="chip" style="background:var(--pop)"></span><span class="meta"><span class="v">--pop</span><span class="u">Magenta · promos & energy</span></span></div>
+  </div>
+</body></html>

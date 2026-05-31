@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;font-family:var(--font-body);padding:0;}
+  .wrap{display:flex;min-height:210px;}
+  .pane{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;}
+  .light{background:var(--pearl);}
+  .dark{background:var(--teal-800);}
+  .lockup{display:flex;align-items:center;gap:14px;}
+  .logo{width:74px;height:74px;border-radius:50%;box-shadow:var(--shadow-md);}
+  .wm{display:flex;flex-direction:column;line-height:1;}
+  /* distinctive, popular wordmark serif with the ASH (her name) emphasized */
+  .word{font-family:var(--font-wordmark);font-weight:700;font-size:36px;letter-spacing:0;}
+  .light .word{color:var(--ink-900);}
+  .dark .word{color:#fff;}
+  .word .ash{color:var(--mulberry);font-weight:700;}
+  .dark .word .ash{color:var(--rose-300);}
+  .by{font-family:var(--font-body);font-weight:700;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:5px;}
+  .light .by{color:var(--ink-500);}
+  .dark .by{color:var(--teal-200);}
+  .scriptline{font-family:var(--font-script);font-size:26px;}
+  .light .scriptline{color:var(--mulberry);}
+  .dark .scriptline{color:#fff;}
+  .cap{font-size:11px;color:var(--ink-500);}
+  .dark .cap{color:var(--teal-200);}
+  .tag{position:absolute;top:8px;left:14px;font-size:var(--fs-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:700;color:var(--accent-hover);}
+</style></head>
+<body>
+  <span class="tag">Logo &amp; wordmark</span>
+  <div class="wrap">
+    <div class="pane light">
+      <div class="lockup">
+        <img class="logo" src="../assets/brand/logo-round.png" alt="CreASHions by Asha logo">
+        <div class="wm"><span class="word">Cre<span class="ash">ASH</span>ions</span><span class="by">by Asha · resin art</span></div>
+      </div>
+      <span class="scriptline">with love, Asha</span>
+      <span class="cap">Wordmark in Playfair Display — “ASH” (her name) in mulberry · script kept for signatures</span>
+    </div>
+    <div class="pane dark">
+      <div class="lockup">
+        <img class="logo" src="../assets/brand/logo-round.png" alt="">
+        <div class="wm"><span class="word">Cre<span class="ash">ASH</span>ions</span><span class="by">by Asha · resin art</span></div>
+      </div>
+      <span class="scriptline">with love, Asha</span>
+    </div>
+  </div>
+</body></html>

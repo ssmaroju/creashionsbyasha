@@ -1,0 +1,190 @@
+/* ============================================================
+   CreASHions by Asha — Design System
+   Foundations: color + typography tokens
+   Anchored on Asha's watercolor dragonfly logo.
+   ============================================================ */
+
+/* ---- Fonts (Google Fonts substitutions — see README "Type") ---- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
+
+:root {
+  /* ---------------------------------------------------------
+     1. BRAND COLOR — pulled from the watercolor logo
+     --------------------------------------------------------- */
+
+  /* Blush rose family — the soft feminine heart of the brand */
+  --blush-50:  #FCF1F4;   /* faintest wash */
+  --blush-100: #F8DEE6;
+  --blush-200: #F1C4D2;
+  --rose-300:  #E2A0B5;
+  --rose-400:  #D07F99;
+  --rose-500:  #B5627E;   /* mid rose */
+  --mulberry:  #8E4A66;   /* deepest rose — PRIMARY action */
+
+  /* Lilac / lavender — watercolor secondary */
+  --lilac-100: #ECE3F4;
+  --lilac-200: #D9C7EA;
+  --lavender-400: #A98AC6;
+  --lavender-600: #7E5E9C;
+
+  /* Dragonfly blue → teal — Asha's signature accents (from her bmt palette).
+     Dragonflies are blue-teal, so these double as the brand's signature. */
+  --teal-100: #DCEFF1;    /* faint teal wash */
+  --teal-200: #A6DEE4;
+  --teal-400: #00ADBB;    /* bright dragonfly teal — the spark */
+  --teal-600: #00A0AF;    /* teal alt */
+  --teal-800: #00263A;    /* deep navy — dark sections (kept name for compat) */
+  --cyan:     #00B6DD;    /* bright cyan highlight */
+  --blue-500: #1E6390;    /* mid blue — links, readable accent */
+  --blue-700: #005581;    /* deep blue */
+  --blue-800: #003A5D;    /* dark blue */
+  --navy-900: #00263A;    /* deepest navy */
+  --magenta:  #E20177;    /* vivid pop — promos & energy (sibling of blush) */
+
+  /* Sage mist — soft resin green */
+  --sage-200: #CFE0D9;
+  --sage-400: #9CBDB1;
+  --sage-600: #6E948A;
+
+  /* Champagne gold — the resin shimmer / metallic flake accent */
+  --gold-200: #EAD9B8;
+  --gold-400: #C9A66B;
+  --gold-600: #A8853F;
+
+  /* ---------------------------------------------------------
+     2. NEUTRALS — warm, never cold gray
+     --------------------------------------------------------- */
+  --pearl:   #FBF6F3;     /* page background */
+  --linen:   #F3E9E3;     /* alt section background */
+  --sand:    #E7D8CF;     /* hairlines / soft fills */
+  --taupe:   #C3B0A6;     /* muted borders */
+  --ink-900: #3A2C31;     /* primary text (warm aubergine-brown) */
+  --ink-700: #5A484F;     /* secondary text */
+  --ink-500: #8A757C;     /* tertiary / captions */
+  --white:   #FFFFFF;
+
+  /* ---------------------------------------------------------
+     3. SEMANTIC TOKENS
+     --------------------------------------------------------- */
+  --bg:            var(--pearl);
+  --bg-alt:        var(--linen);
+  --surface:       var(--white);
+  --fg:            var(--ink-900);
+  --fg-muted:      var(--ink-700);
+  --fg-subtle:     var(--ink-500);
+  --border:        var(--sand);
+  --border-strong: var(--taupe);
+
+  --primary:        var(--mulberry);     /* buttons, key actions */
+  --primary-hover:  #7C3F58;
+  --primary-soft:   var(--blush-100);    /* tinted backgrounds */
+  --accent:         var(--teal-400);     /* dragonfly teal — icons, focus, flourishes */
+  --accent-hover:   var(--blue-700);     /* deep blue — readable link/eyebrow text */
+  --highlight:      var(--gold-400);     /* shimmer details, badges */
+  --pop:            var(--magenta);      /* high-energy promos & sale flashes */
+
+  --success: #5E8C6A;
+  --sale:    #B5627E;
+
+  /* ---------------------------------------------------------
+     4. TYPE SCALE
+     --------------------------------------------------------- */
+  --font-display: 'Cormorant Garamond', 'Hoefler Text', Georgia, serif;
+  --font-wordmark: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-script:  'Pinyon Script', 'Snell Roundhand', cursive;
+  --font-body:    'Nunito Sans', -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-display:  clamp(3rem, 6vw, 5.25rem);   /* hero */
+  --fs-h1:       clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h2:       clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3:       1.5rem;
+  --fs-title:    1.175rem;
+  --fs-body:     1.0625rem;
+  --fs-small:    0.9375rem;
+  --fs-caption:  0.8125rem;
+  --fs-eyebrow:  0.75rem;
+
+  --lh-tight: 1.08;
+  --lh-snug:  1.3;
+  --lh-body:  1.65;
+
+  --tracking-eyebrow: 0.22em;
+  --tracking-tight:  -0.01em;
+
+  /* ---------------------------------------------------------
+     5. SPACING / RADIUS / SHADOW / MOTION
+     --------------------------------------------------------- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --space-9: 96px; --space-10: 128px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Soft, warm-tinted shadows — never harsh black */
+  --shadow-sm:  0 1px 2px rgba(58,44,49,0.06), 0 2px 6px rgba(58,44,49,0.05);
+  --shadow-md:  0 4px 14px rgba(58,44,49,0.08), 0 2px 6px rgba(58,44,49,0.05);
+  --shadow-lg:  0 14px 40px rgba(58,44,49,0.12), 0 4px 12px rgba(58,44,49,0.06);
+  --shadow-glow: 0 8px 30px rgba(0,173,187,0.26);  /* dragonfly-teal glow */
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 0.32s;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — opt-in via .ds-prose or直接
+   ============================================================ */
+.ds-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+/* Old-style (text) numerals on all display serif — softer, handcrafted,
+   echoes Asha's flowing logo script. */
+.ds-display, h1, .ds-h1, h2, .ds-h2, h3, .ds-h3 {
+  font-feature-settings: 'onum' 1;
+}
+.ds-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  color: var(--mulberry);
+  line-height: 1;
+}
+h1, .ds-h1 {
+  font-family: var(--font-display);
+  font-weight: 600; font-size: var(--fs-h1);
+  line-height: var(--lh-tight); letter-spacing: var(--tracking-tight);
+  color: var(--fg); margin: 0;
+}
+h2, .ds-h2 {
+  font-family: var(--font-display);
+  font-weight: 600; font-size: var(--fs-h2);
+  line-height: var(--lh-snug); color: var(--fg); margin: 0;
+}
+h3, .ds-h3 {
+  font-family: var(--font-display);
+  font-weight: 600; font-size: var(--fs-h3);
+  line-height: var(--lh-snug); color: var(--fg); margin: 0;
+}
+.ds-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700; font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
+  color: var(--accent-hover);
+}
+body, .ds-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body); line-height: var(--lh-body);
+  color: var(--fg-muted);
+}
+.ds-small { font-size: var(--fs-small); }
+.ds-caption { font-size: var(--fs-caption); color: var(--fg-subtle); }
+a, .ds-link { color: var(--accent-hover); text-decoration: none; }
+a:hover, .ds-link:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }

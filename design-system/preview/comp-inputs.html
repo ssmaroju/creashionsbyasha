@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--bg);font-family:var(--font-body);padding:24px;}
+  .lbl{font-size:var(--fs-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:700;color:var(--accent-hover);margin:0 0 14px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end;}
+  label{font-size:12px;font-weight:700;color:var(--ink-700);display:block;margin-bottom:6px;}
+  input,select{width:100%;box-sizing:border-box;font-family:var(--font-body);font-size:15px;color:var(--ink-900);padding:12px 14px;border:1.5px solid var(--sand);border-radius:var(--radius-md);background:#fff;outline:none;transition:all .2s var(--ease);}
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,173,187,.20);}
+  .foc{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,173,187,.20);}
+  .chips{display:flex;gap:8px;margin-top:6px;}
+  .chip{border:1.5px solid var(--sand);background:#fff;border-radius:var(--radius-pill);padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink-700);}
+  .chip.on{border-color:var(--mulberry);background:var(--blush-50);color:var(--mulberry);}
+</style></head>
+<body>
+  <p class="lbl">Form inputs · custom-order fields</p>
+  <div class="grid">
+    <div><label>Your name</label><input value="Asha" class="foc"></div>
+    <div><label>Personalize with (name/text)</label><input placeholder="e.g. Ryansh"></div>
+  </div>
+  <div style="margin-top:16px"><label>Choose a size</label>
+    <div class="chips"><span class="chip">12oz</span><span class="chip on">20oz</span><span class="chip">30oz</span></div>
+  </div>
+</body></html>
